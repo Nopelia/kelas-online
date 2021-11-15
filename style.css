@@ -1,0 +1,57 @@
+body {
+	margin: 15%;
+	font-family: sans-serif
+}
+
+.card {
+	margin-bottom: 30px;
+	border: 1px solid #ccc;
+	padding: 5px
+}
+
+.card-group {
+	margin-bottom: 10px
+}
+
+.error {
+	color: red
+}
+
+.active {
+	text-decoration: line-through
+}
+
+.title {
+	margin-bottom: 0
+}
+
+ul {
+	padding: 0;
+	margin-top: 0
+}
+
+li {
+	margin: 5px;
+	border: 1px solid #ccc;
+	padding: 5px
+}
+
+li label {
+	cursor: pointer
+}
+
+input {
+	padding: 3px
+}
+
+.items {
+	display: flex;
+	justify-content: space-between;
+}
+
+a.btn-danger {
+	background: salmon;
+	color: #fff;
+	padding: 2px;
+	text-decoration: none
+}

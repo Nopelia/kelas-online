@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vuejs</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="app">
+		<h2>Kelas Online</h2>
+
+		<p>Panel Administrator.</p>
+		<div class="card">
+			<div class="card-group">
+				<label>Judul Halaman</label> <br> 
+				<input type="text">
+			</div> 
+
+			<div class="card-group">
+				<label><input type="checkbox"> Daftar Kelas</label> 
+				<label><input type="checkbox"> Kelas Baru</label> 
+				<label><input type="checkbox"> Progress Kelas</label>
+			</div>
+		</div>
+
+		<div class="card">
+			<label for="progress">Progress kelas: (50%)</label> 
+			<progress id="progress" max="100" value="50"></progress>
+		</div>
+
+		<div class="card">
+			<form>
+				<label for="">Kelas</label> 
+				<input type="text" placeholder="Kelas Baru"> 
+				<button>Tambah</button>
+			</form>
+		</div>
+
+		<h3 class="title">Daftar Mata Pelajaran (<small>{{kelas.length}}</small>)</h3>
+
+		<ul>
+			<li class="items"v-for="k in kelas">
+				<label>
+					<input type="checkbox"v-model="k.active"> {{k.nama}}</label> 
+				<a href="#" class="btn-danger">× hapus</a>
+			</li>
+		</ul>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+	<script>
+		new Vue({
+			el:'#app',
+			data:{
+				kelas:[
+					{nama: 'IPA', active: true},
+					{nama: 'IPS', active: true},
+					{nama: 'PKN', active: false},
+					{nama: 'Bahasa Indonesia', active: false},
+					{nama: 'Bahasa Inggris', active: false},
+					{nama: 'Matematika', active: true},
+				]
+			}
+		})
+	</script>
+</body>
+</html>
